@@ -1,0 +1,82 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, footer{
+    font-family: cursive;
+    text-align: center;
+    padding: 10px;
+}
+
+.header, footer, h1, h2{
+    background-color: brown;
+    color: chartreuse;
+}
+footer{
+    height: 10vh;
+    margin-top: 415px;
+    justify-content: center;
+}
+
+.carrusel{
+    position: relative;
+    overflow: hidden; /*en caso de imagen o texto que se oculten*/
+    margin-top: 20px;
+}
+
+.contenedor{
+    display: flex;
+    gap: 60px; /*espacio entre imágenes*/
+    width: max-content;
+    animation: mover 10s linear infinite;
+
+    transition: all 2s ease; /*para que las transiciones al colocar la imagen dure 2segundos*/
+}
+
+img:hover{
+    opacity: 0.5;
+    scale: 1.05;
+}
+
+.contenedor:hover{
+    animation-play-state: paused;
+    cursor: pointer; /*al poner el cursor se detiene el movimiento*/
+}
+
+@keyframes mover {
+    /*deizquierda a dereche*/
+0%{transform: translateX(-50%)}
+    100%{transform: translateX(0%)}
+
+    /*de derecha a izquierda
+    0%{transform: translateX(0%)}
+    100%{transform: translateX(-50%)}   */
+}
+
+img{
+    border-radius: 12px; /*parte redondeada de las cajas*/
+    box-shadow: 0 0 10px blue;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.caja2{
+    border: 2px solid red;
+}
+
+.redes{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.fa-brands{
+    color: aquamarine;
+    font-size: large;
+}
